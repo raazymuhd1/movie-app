@@ -27,5 +27,5 @@
 ## How To Host React App Online
 
 
-#### run this command to allow access repository from another user on windwos
-- ```git config --global --add safe.directory https://github.com/muhammadraazy/fun-movies.git```
+<!-- #### run this command to allow access repository from another user on windwos
+- ```git config --global --add safe.directory https://github.com/muhammadraazy/fun-movies.git``` -->

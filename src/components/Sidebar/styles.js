@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 export const SidebarWrapper = styled.div`
    position: sticky;
-   height: ${({showMenu}) => showMenu ? "fit-content" : "100%"};
+   height: ${({showMenu}) => showMenu ? "100vh" : "100%"};
    background-color: black;
    top: 0px;
    bottom: 5px;
