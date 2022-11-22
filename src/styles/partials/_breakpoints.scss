@@ -1,0 +1,47 @@
+@use "sass:map";
+
+$breakpoints: (
+    xs: 400px,
+    sm: 500px,
+    md1: 620px,
+    md2: 760px,
+    lg1: 920px,
+    lg2: 1240px,
+);
+
+
+@mixin xs {
+    @media screen and (min-width: map-get($breakpoints, xs)) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media screen and (min-width: map-get($breakpoints, sm)) {
+        @content;
+    }
+}
+
+@mixin md1 {
+    @media screen and (min-width: map-get($breakpoints, md1)) {
+        @content;
+    }
+}
+
+@mixin md2 {
+    @media screen and (min-width: map-get($breakpoints, md2)) {
+        @content;
+    }
+}
+
+@mixin lg1 {
+    @media screen and (min-width: map-get($breakpoints, lg1)) {
+        @content;
+    }
+}
+
+@mixin lg2 {
+    @media screen and (min-width: map-get($breakpoints, lg2)) {
+        @content;
+    }
+}

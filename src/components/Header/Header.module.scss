@@ -1,0 +1,79 @@
+@use '../../styles/partials/breakpoints' as breakpoints;
+
+@include breakpoints.xs {
+    .container {
+        display: flex;
+        flex-direction: column !important;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        justify-content: flex-start !important;
+        
+        .menuList_left {
+            display: grid;
+            grid-template-columns: repeat(3, 60px);
+            gap: 8px 10px;
+
+            .menu_item {
+                font-size: 2.6vmax !important;
+            }
+        }
+
+        .menuList_right {
+            flex-wrap: wrap;
+            gap: 10px 20px !important;
+            //  flex-direction: column;
+
+            .menu_item {
+                font-size: 2.6vmax !important;
+            }
+        }
+    }
+}
+
+@include breakpoints.sm {
+    .container {
+
+        .menuList_left {
+            display: grid;
+            grid-template-columns: repeat(4, 60px);
+            gap: 8px 10px;
+        }
+    }
+}
+
+@include breakpoints.md1 {
+    .container {
+
+        .menuList_left {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            gap: 8px 10px;
+        }
+    }
+}
+
+@include breakpoints.lg1 {
+    .container {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+
+        .menuList_left .menu_item, .menuList_right .menu_item {
+            font-size: 1.3rem !important;
+        }
+    }
+}
+
+@include breakpoints.lg2 {
+    .container {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+
+        .menuList_left .menu_item, .menuList_right .menu_item {
+            font-size: 1.3rem !important;
+        }
+    }
+}
+
+.container::-webkit-scrollbar {
+    display: none;
+}

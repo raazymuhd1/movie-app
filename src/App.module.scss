@@ -1,0 +1,11 @@
+.app {
+  display: flex;
+  
+  .main {
+    display: grid;
+    background-color: black;
+     padding: 10px;
+     grid-template-columns: 100%;
+     flex: 7;
+  }
+}

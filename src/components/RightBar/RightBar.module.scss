@@ -1,0 +1,15 @@
+@use '../../styles/partials/breakpoints' as breakpoints;
+
+@include breakpoints.xs {
+    .container {
+        display: none;
+    }
+}
+
+@include breakpoints.lg1 {
+    .container {
+        display: inline-block;
+        // flex: .2;
+        // width: 200px;
+    }
+}

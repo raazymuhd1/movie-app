@@ -1,0 +1,109 @@
+@use '../../styles/partials/breakpoints' as breakpoints;
+
+@include breakpoints.xs {
+    .wrapper_top {
+        justify-content: flex-start !important;
+        
+        .more {
+            gap: 0 8px !important;
+            
+            .small_title, .arrow_icon {
+                font-size: 2.5vmax !important;
+              }
+        }
+
+        .title {
+            font-size: 3vmax !important;
+        }
+    
+    }
+
+    .wrapper_bottom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr) !important;
+
+        .movie_image {
+            width: 165px;
+            height: 150px;
+        }
+
+        .movie_title {
+        font-size: 2vmax !important;
+        }
+    }
+
+}
+
+@include breakpoints.sm {
+    .wrapper_bottom { 
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px 0;
+
+        .movie_image {
+            width: 32vmax;
+            height: 200px;
+        }
+    }
+}
+
+@include breakpoints.md1 { 
+    .wrapper_bottom { 
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 5px 10px;
+
+        .movie_image {
+            width: 24vmax;
+            height: 200px;
+            border-radius: 8px;
+        }
+    }
+
+}
+
+
+@include breakpoints.lg1 {
+    .wrapper_top {
+        justify-content: space-between !important;
+        
+        .more {
+            gap: 0 8px !important;
+            
+            .small_title, .arrow_icon {
+                font-size: 1.5vmax !important;
+              }
+        }
+
+        .title {
+            font-size: 2vmax !important;
+        }
+    
+    }
+
+    .wrapper_bottom { 
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 10px 0;
+
+        .movie_image {
+            width: 16vmax;
+            height: 200px;
+        }
+        
+        .movie_title {
+            font-size: 1rem !important;
+        }
+    }
+}
+
+@include breakpoints.lg2 {
+    .wrapper_bottom { 
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: 10px 0;
+
+        .movie_image {
+            width: 11.5vmax;
+            height: 200px;
+        }
+
+    }
+}
+

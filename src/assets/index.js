@@ -1,0 +1,7 @@
+export { default as appleTv } from "./apple_tv.jpg"
+export { default as hulu } from "./hulu.jpg"
+export { default as disney } from "./disney+.jpg"
+export { default as netflix } from "./netflix.png"
+export { default as peacock } from "./peacock.png"
+export { default as prime } from "./prime_v.png"
+export { default as hbo } from "./hbo.jpg"

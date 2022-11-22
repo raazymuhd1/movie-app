@@ -1,0 +1,45 @@
+@use "../../styles/partials/breakpoints" as breakpoints;
+
+
+@include breakpoints.xs {
+   .openIcon {
+      cursor: pointer;
+      font-size: 35px;
+      color: white;
+      position: relative;
+      top: 20px;
+      left: 10px;
+      display: inline-block !important;
+   }
+
+}
+
+@include breakpoints.lg2 {
+   .openIcon {
+      display: none !important;
+   }
+
+   .container {
+      display: inline-block !important;
+
+      .title_wrapper {
+         padding: 4px;
+
+         .title, .icon {
+            font-size: 2vmax;
+         }
+      }
+   }
+   }
+   
+
+// .container::-webkit-scrollbar {
+//    display: none;
+// }
+
+// @include breakpoints.sm {
+//    .container {
+//       position: static !important;
+//       overflow-y: scroll;
+//    }
+// }
