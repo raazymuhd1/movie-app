@@ -1,14 +1,19 @@
 import styled from "styled-components";
 
+export const OuterWrapper = styled.div`
+   height: 100vh;
+   position: sticky;
+   top: 0px;
+   bottom: 5px;
+   left: 0;
+   background-color: black;
+   border-left: .5px solid #333;
+`
+
 export const Container = styled.div`
-    padding: 15px 15px 35px 15px;
+    padding: 20px 0px 20px 10px;
     color: white;
-    height: fit-content;
-    border-left: 1px solid #333;
-    background: black;
-    position: sticky;
-    top: 0;
-    bottom: 5px;
+    height: "100%";
 `
 
 export const Title = styled.h2`

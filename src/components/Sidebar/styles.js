@@ -1,17 +1,18 @@
 import styled from "styled-components"
 
 export const OuterWrapper = styled.div`
-   height: 100vh;
-   position: sticky;
-   top: 0px;
-   bottom: 5px;
-   left: 0;
-   background-color: black;
-   border-right: .5px solid #333;
 `
 
 export const SidebarWrapper = styled.div`
-   height: "100%";
+   height: 100vh;
+   position: sticky;
+   min-width: 50px;
+   top: 0px;
+   bottom: 5px;
+   left: 0;
+   border-right: .5px solid #333;
+   background-color: "#000";
+   z-index: 9;
 `
 
 export const CloseMenu = styled.button`
@@ -33,6 +34,9 @@ export const Container = styled.div`
    background-color: black;
    color: white;
    padding: 15px 10px 30px 15px;
+   display: inline-block;
+   height: 100vh;
+   background-color: "#000";
 `
 
 export const Spacing = styled.hr`

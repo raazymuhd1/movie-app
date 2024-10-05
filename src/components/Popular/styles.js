@@ -41,6 +41,7 @@ export const Image = styled.img`
     width: ${({small}) => small ? "100%" : "100%"};
     height: 350px;
     border-radius: 7px;
+    object-fit: "cover";
 `
 
 export const InfoWrapper = styled.div`

@@ -28,7 +28,7 @@ const Sidebar = () => {
     const defaultStyle = { color: "gray" }
 
   return (
-    <OuterWrapper>
+    // <OuterWrapper>
         <SidebarWrapper>
             <CgDetailsMore className={styles.openIcon} onClick={() => setShowMenu(!showMenu)} />
                 { showMenu && (
@@ -109,7 +109,7 @@ const Sidebar = () => {
                     </Container>
                 )}
         </SidebarWrapper>
-    </OuterWrapper>
+    // </OuterWrapper>
   )
 }
 
