@@ -1,6 +1,7 @@
-# I Build This Project Using React 
+# FunMovies
+   `FunMovies` is a web services whereas user can check the latest movies, trending movies, top movies, etc.
 
-## API From The Movie Database (TMDB)
+## Movies API From The Movie Database (TMDB)
 [tmdb-api](https://)
 
 ## Technology That I Used To Build This Project
@@ -25,7 +26,3 @@
    ```
 
 ## How To Host React App Online
-
-
-<!-- #### run this command to allow access repository from another user on windwos
-- ```git config --global --add safe.directory https://github.com/muhammadraazy/fun-movies.git``` -->
