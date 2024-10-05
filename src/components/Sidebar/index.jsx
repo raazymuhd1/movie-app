@@ -1,6 +1,7 @@
 import {useState} from "react"
 // styled-components library
 import { 
+    OuterWrapper,
     SidebarWrapper, 
     Container, 
     MenuList, 
@@ -27,86 +28,88 @@ const Sidebar = () => {
     const defaultStyle = { color: "gray" }
 
   return (
-    <SidebarWrapper showMenu>
-        <CgDetailsMore className={styles.openIcon} onClick={() => setShowMenu(!showMenu)} />
-            { showMenu && (
-                <Container className={styles.container}>
-                        <Wrapper className={styles.title_wrapper}>
-                            <RiRecordMailFill className={styles.icon} style={{fontSize: "2.5rem"}} />
-                            <Title className={styles.title}> FunMovies </Title>
-                        </Wrapper>
-                        <Title menuTitle> Menu </Title>
-                        <MenuList>
-                            <NavLink to="/"
-                                style={({ isActive }) => isActive ? activeStyle : defaultStyle}>
+    <OuterWrapper>
+        <SidebarWrapper>
+            <CgDetailsMore className={styles.openIcon} onClick={() => setShowMenu(!showMenu)} />
+                { showMenu && (
+                    <Container className={styles.container}>
+                            <Wrapper className={styles.title_wrapper}>
+                                <RiRecordMailFill className={styles.icon} style={{fontSize: "2.5rem"}} />
+                                <Title className={styles.title}> FunMovies </Title>
+                            </Wrapper>
+                            <Title menuTitle> Menu </Title>
+                            <MenuList>
+                                <NavLink to="/"
+                                    style={({ isActive }) => isActive ? activeStyle : defaultStyle}>
+                                    <MenuWrapper>
+                                        <ImHome />
+                                        <MenuItem> Home </MenuItem>
+                                    </MenuWrapper>
+                                </NavLink>
+                                <NavLink 
+                                    to="/popular" 
+                                    style={({ isActive }) => isActive ? activeStyle : defaultStyle}>
+                                    <MenuWrapper>
+                                        <BsLaptopFill />
+                                        <MenuItem> Popular </MenuItem>
+                                    </MenuWrapper>
+                                </NavLink>
+                                <NavLink to="/trending"
+                                    style={({ isActive }) => isActive ? activeStyle : defaultStyle}>
+                                    <MenuWrapper>   
+                                        <FiTrendingUp />
+                                        <MenuItem> Trending </MenuItem>
+                                    </MenuWrapper>
+                                </NavLink>
+                                <NavLink
+                                    to="/now-playing"
+                                    style={({ isActive }) => isActive ? activeStyle : defaultStyle}>
+                                    <MenuWrapper>
+                                        <BsFillPlayBtnFill />
+                                        <MenuItem> Now playing </MenuItem>
+                                    </MenuWrapper>
+                                </NavLink>
+                                <NavLink 
+                                    to="/upcoming"
+                                    style={({ isActive }) => isActive ? activeStyle : defaultStyle}>
+                                    <MenuWrapper>
+                                        <MdTableView />
+                                        <MenuItem> Upcoming </MenuItem>
+                                    </MenuWrapper>
+                                </NavLink>
+                                <NavLink 
+                                    to="/top-rated"
+                                    style={({ isActive }) => isActive ? activeStyle : defaultStyle}>
+                                    <MenuWrapper>
+                                        <MdTableView />
+                                        <MenuItem> Top rated </MenuItem>
+                                    </MenuWrapper>
+                                </NavLink>
+                            </MenuList>
+                            <Spacing />
+                            <Title menuTitle> Library </Title>
+                            <MenuList> 
                                 <MenuWrapper>
-                                    <ImHome />
-                                    <MenuItem> Home </MenuItem>
+                                    <MdRecentActors />
+                                    <MenuItem> Recent </MenuItem>
                                 </MenuWrapper>
-                            </NavLink>
-                            <NavLink 
-                                to="/popular" 
-                                style={({ isActive }) => isActive ? activeStyle : defaultStyle}>
                                 <MenuWrapper>
-                                    <BsLaptopFill />
-                                    <MenuItem> Popular </MenuItem>
+                                    <MdBookmarks />
+                                    <MenuItem> Bookmarked </MenuItem>
                                 </MenuWrapper>
-                            </NavLink>
-                            <NavLink to="/trending"
-                                style={({ isActive }) => isActive ? activeStyle : defaultStyle}>
-                                <MenuWrapper>   
-                                    <FiTrendingUp />
-                                    <MenuItem> Trending </MenuItem>
-                                </MenuWrapper>
-                            </NavLink>
-                            <NavLink
-                                to="/now-playing"
-                                style={({ isActive }) => isActive ? activeStyle : defaultStyle}>
                                 <MenuWrapper>
-                                    <BsFillPlayBtnFill />
-                                    <MenuItem> Now playing </MenuItem>
+                                    <SiToptal />
+                                    <MenuItem> Most viewed </MenuItem>
                                 </MenuWrapper>
-                            </NavLink>
-                            <NavLink 
-                                to="/upcoming"
-                                style={({ isActive }) => isActive ? activeStyle : defaultStyle}>
                                 <MenuWrapper>
-                                    <MdTableView />
-                                    <MenuItem> Upcoming </MenuItem>
+                                    <BsDownload />
+                                    <MenuItem> Downloaded </MenuItem>
                                 </MenuWrapper>
-                            </NavLink>
-                            <NavLink 
-                                to="/top-rated"
-                                style={({ isActive }) => isActive ? activeStyle : defaultStyle}>
-                                <MenuWrapper>
-                                    <MdTableView />
-                                    <MenuItem> Top rated </MenuItem>
-                                </MenuWrapper>
-                            </NavLink>
-                        </MenuList>
-                        <Spacing />
-                        <Title menuTitle> Library </Title>
-                        <MenuList> 
-                            <MenuWrapper>
-                                <MdRecentActors />
-                                <MenuItem> Recent </MenuItem>
-                            </MenuWrapper>
-                            <MenuWrapper>
-                                <MdBookmarks />
-                                <MenuItem> Bookmarked </MenuItem>
-                            </MenuWrapper>
-                            <MenuWrapper>
-                                <SiToptal />
-                                <MenuItem> Most viewed </MenuItem>
-                            </MenuWrapper>
-                            <MenuWrapper>
-                                <BsDownload />
-                                <MenuItem> Downloaded </MenuItem>
-                            </MenuWrapper>
-                        </MenuList>
-                </Container>
-            )}
-    </SidebarWrapper>
+                            </MenuList>
+                    </Container>
+                )}
+        </SidebarWrapper>
+    </OuterWrapper>
   )
 }
 

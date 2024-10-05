@@ -1,12 +1,17 @@
 import styled from "styled-components"
 
-export const SidebarWrapper = styled.div`
+export const OuterWrapper = styled.div`
+   height: 100vh;
    position: sticky;
-   height: ${({showMenu}) => showMenu ? "100vh" : "100%"};
-   background-color: black;
    top: 0px;
    bottom: 5px;
    left: 0;
+   background-color: black;
+   border-right: .5px solid #333;
+`
+
+export const SidebarWrapper = styled.div`
+   height: "100%";
 `
 
 export const CloseMenu = styled.button`
@@ -28,7 +33,6 @@ export const Container = styled.div`
    background-color: black;
    color: white;
    padding: 15px 10px 30px 15px;
-   border-right: .5px solid #333;
 `
 
 export const Spacing = styled.hr`
